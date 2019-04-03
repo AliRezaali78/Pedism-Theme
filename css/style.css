@@ -1,0 +1,23 @@
+/* Colors */
+.bg-dark {
+  background-color: #011c26 !important;
+}
+
+.navbar .nav-item.active {
+  border-left: 1px solid #f4cb89db;
+}
+.navbar .navbar-nav .nav-link {
+  color: #588c8c;
+  padding: 0.5rem 1rem;
+  font-size: 110%;
+  text-transform: uppercase;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: rgba(244, 203, 137, 0.8);
+}
+.navbar .navbar-nav .active > .nav-link {
+  color: #f4cb89;
+}
+.navbar .navbar-brand {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
