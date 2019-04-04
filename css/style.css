@@ -3,6 +3,27 @@
   background-color: #011c26 !important;
 }
 
+.btn-danger {
+  background-color: #d9042b;
+  border-color: #d9042b;
+}
+.btn-danger:hover {
+  background-color: #6b0c22;
+  border-color: #6b0c22;
+}
+
+.btn-primary {
+  color: rgb(88, 140, 140);
+  background-color: #011c26;
+  border-color: #011c26;
+}
+.btn-primary:hover {
+  color: rgb(78, 190, 190);
+  background-color: rgb(5, 55, 73);
+  border-color: rgb(5, 55, 73);
+}
+
+/* Navbar */
 .navbar .nav-item.active {
   border-left: 1px solid #f4cb89db;
 }
@@ -20,4 +41,21 @@
 }
 .navbar .navbar-brand {
   color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ShowCase */
+.carousel-item {
+  height: 450px;
+}
+.carousel-img-1 {
+  background: url(../img/image1.jpg);
+  background-size: cover;
+}
+.carousel-img-2 {
+  background: url(../img/image2.jpg);
+  background-size: cover;
+}
+.carousel-img-3 {
+  background: url(../img/image3.jpg);
+  background-size: cover;
 }
