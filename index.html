@@ -140,6 +140,12 @@
     <script>
       $("#year").text(new Date().getFullYear());
 
+      // Carousel
+      $(".carousel").carousel({
+        interval: 6000,
+        pause: "hover"
+      });
+
       // Scroll Spy
       $("body").scrollspy({ target: "#main-nav" });
 
