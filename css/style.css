@@ -78,3 +78,18 @@
   width: 100%;
   height: 100%;
 }
+
+/* Video Section */
+
+#video-section {
+  position: relative;
+  color: #fff;
+  background: url(../img/media.jpg);
+  min-height: 200px;
+  background-repeat: no-repeat;
+  word-spacing: 5px;
+  letter-spacing: 4px;
+}
+#video-section .video {
+  color: #fff;
+}
