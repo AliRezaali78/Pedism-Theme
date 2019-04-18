@@ -198,54 +198,6 @@
     ></script>
     <script>
       $("#year").text(new Date().getFullYear());
-
-      // Carousel
-      $(".carousel").carousel({
-        interval: 6000,
-        pause: "hover"
-      });
-
-      // Scroll Spy
-      $("body").scrollspy({ target: "#main-nav" });
-
-      // Add smooth scrolling
-      $("#main-nav a").on("click", function(e) {
-        // Check for a hash value
-        if (this.hash !== "") {
-          // Prevent default behavior
-          e.preventDefault();
-
-          // Store hash
-          const hash = this.hash;
-
-          // Animate smooth scroll
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top
-            },
-            900,
-            function() {
-              // Add hash to URL after scroll
-              window.location.hash = hash;
-            }
-          );
-        }
-      });
-
-      // Video Play
-      $(function() {
-        $(".video").click(function() {
-          var theModal = $(this).data("target"),
-            videoSRC = $(this).attr("data-video"),
-            videoSRCauto =
-              videoSRC +
-              "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
-          $(theModal + " iframe").attr("src", videoSRCauto);
-          $(theModal + " button.close").click(function() {
-            $(theModal + " iframe").attr("src", videoSRC);
-          });
-        });
-      });
     </script>
   </body>
 </html>
