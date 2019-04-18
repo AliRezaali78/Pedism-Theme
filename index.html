@@ -323,7 +323,7 @@
       </div>
     </section>
     <!-- Main Footer -->
-    <footer id="main-footer" class="text-center pt-4 bg-light">
+    <footer id="main-footer" class="text-center pt-4">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -356,33 +356,6 @@
       $(".carousel").carousel({
         interval: 6000,
         pause: "hover"
-      });
-
-      // Scroll Spy
-      $("body").scrollspy({ target: "#main-nav" });
-
-      // Add smooth scrolling
-      $("#main-nav a").on("click", function(e) {
-        // Check for a hash value
-        if (this.hash !== "") {
-          // Prevent default behavior
-          e.preventDefault();
-
-          // Store hash
-          const hash = this.hash;
-
-          // Animate smooth scroll
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top
-            },
-            900,
-            function() {
-              // Add hash to URL after scroll
-              window.location.hash = hash;
-            }
-          );
-        }
       });
 
       // Video Play
