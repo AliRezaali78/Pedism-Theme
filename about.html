@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pedism Theme</title>
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Pedism</a>
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapse" class="collapse navbar-collapse ">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item  ">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a href="about.html" class="nav-link ">About Us</a>
+            </li>
+            <li class="nav-item ">
+              <a href="services.html" class="nav-link ">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="blog.html" class="nav-link ">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link ">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PageHeader  -->
+    <section id="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-light pt-5">
+            <h1 class="font-weight-normal">About Us</h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+              omnis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us  -->
+    <section id="aboutUs" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="text-capitalize display-4">what we do?</h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
+              possimus minus! Tempore, aliquid vero. Maxime sunt, et atque
+              culpa, placeat dolor tenetur voluptatibus non perferendis quo
+              adipisci odio exercitationem aperiam enim dolores sapiente magni
+              reiciendis minus corrupti ab inventore vero eaque eos. Quaerat
+              aliquid fugiat nam aliquam? Blanditiis, repudiandae quos?
+            </p>
+            <p class="lead">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Blanditiis ipsam voluptatibus sunt possimus quam aperiam soluta
+              hic, corrupti provident qui.
+            </p>
+          </div>
+          <div class="d-none d-md-block col-md-6">
+            <img
+              src="https://source.unsplash.com/random/700x700/?technology"
+              alt=""
+              class="img img-fluid rounded-circle"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#year").text(new Date().getFullYear());
+
+      // Carousel
+      $(".carousel").carousel({
+        interval: 6000,
+        pause: "hover"
+      });
+
+      // Scroll Spy
+      $("body").scrollspy({ target: "#main-nav" });
+
+      // Add smooth scrolling
+      $("#main-nav a").on("click", function(e) {
+        // Check for a hash value
+        if (this.hash !== "") {
+          // Prevent default behavior
+          e.preventDefault();
+
+          // Store hash
+          const hash = this.hash;
+
+          // Animate smooth scroll
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top
+            },
+            900,
+            function() {
+              // Add hash to URL after scroll
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+
+      // Video Play
+      $(function() {
+        $(".video").click(function() {
+          var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-video"),
+            videoSRCauto =
+              videoSRC +
+              "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function() {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

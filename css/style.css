@@ -125,6 +125,24 @@ body {
   height: 100%;
 }
 
+/* About Us */
+
+/* About Header */
+#pageHeader {
+  background-image: url(../img/image1.jpg);
+  height: 200px;
+  background-attachment: fixed;
+  background-position: 0px -200px;
+  color: #fff;
+  opacity: 0.95;
+}
+
+/* About Us */
+#aboutUs img {
+  transform: translateY(-80px);
+}
+
+/* Medias */
 @media screen And (max-width: 768px) {
   .modal .modal-content,
   .modal img {
