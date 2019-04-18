@@ -16,6 +16,14 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Pedism Theme</title>
   </head>
@@ -99,7 +107,7 @@
       </div>
     </section>
     <!-- Info Boxes -->
-    <section id="infoBoxes">
+    <section id="infoBoxes" class="mb-5">
       <div class="container">
         <div class="row mb-3">
           <div class="col-md-4">
@@ -179,7 +187,88 @@
         </div>
       </div>
     </section>
-
+    <!-- Testomonial -->
+    <section id="testomonial" class="bg-dark text-light py-5 text-center">
+      <div class="container">
+        <h3 class="mb-3 ">Testomonial</h3>
+        <div class="row">
+          <div class="col">
+            <div class="slider">
+              <blockquote>
+                <p class="m-0 lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, laborum.
+                </p>
+                <footer class="blockquote-footer">
+                  John Doe from
+                  <cite title="Company 1">Company 1</cite>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p class="m-0 lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, laborum.
+                </p>
+                <footer class="blockquote-footer">
+                  John Doe from
+                  <cite title="Company 1">Company 1</cite>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p class="m-0 lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, laborum.
+                </p>
+                <footer class="blockquote-footer">
+                  John Doe from
+                  <cite title="Company 1">Company 1</cite>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p class="m-0 lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, laborum.
+                </p>
+                <footer class="blockquote-footer">
+                  John Doe from
+                  <cite title="Company 1">Company 1</cite>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p class="m-0 lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, laborum.
+                </p>
+                <footer class="blockquote-footer">
+                  John Doe from
+                  <cite title="Company 1">Company 1</cite>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p class="m-0 lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, laborum.
+                </p>
+                <footer class="blockquote-footer">
+                  John Doe from
+                  <cite title="Company 1">Company 1</cite>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main Footer -->
+    <footer id="main-footer" class="text-center pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>Copyright &copy; <span id="year"></span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Scripts -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -196,8 +285,31 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     <script>
       $("#year").text(new Date().getFullYear());
+
+      $(".slider").slick({
+        infinite: true,
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              arrows: false
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
     </script>
   </body>
 </html>
