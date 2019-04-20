@@ -2,6 +2,10 @@ body {
   overflow-x: hidden;
 }
 /* Colors */
+.bg-sp {
+  background-color: #012f40;
+}
+
 .bg-dark {
   background-color: #011c26 !important;
 }
@@ -155,6 +159,23 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* FAQ */
+#FAQ .header {
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  font-style: italic;
+}
+#FAQ .card-header {
+  transition: all ease-in-out 0.5s;
+}
+#FAQ .card-header:hover {
+  background: #588c8c;
+  box-shadow: 2px 2px 5px 0.2rem rgba(123, 199, 199, 0.9);
+}
+#FAQ hr {
+  background-color: rgba(244, 203, 137, 0.4);
 }
 
 @media screen And (max-width: 425px) {
