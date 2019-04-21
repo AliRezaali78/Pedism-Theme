@@ -177,7 +177,9 @@ body {
 #FAQ hr {
   background-color: rgba(244, 203, 137, 0.4);
 }
-
+#staff hr {
+  background-color: rgba(244, 203, 137, 0.4);
+}
 @media screen And (max-width: 425px) {
   #photo-gallery img {
     margin-bottom: 15px;
